@@ -1,6 +1,16 @@
 # CanCanCan 2.1.0 failed with preset parameters
 
-## Test result with cancancan 2.0.0
+## Steps to reproduce
+
+```
+git clone https://github.com/znz/example-cancancan-2_1_0-ignores-params-of-new
+cd example-cancancan-2_1_0-ignores-params-of-new
+bundle install
+rails db:migrate
+rails test:system
+```
+
+## Expected test result with cancancan 2.0.0
 
 ```
 $ rake test:system
@@ -21,10 +31,7 @@ Finished in 2.710088s, 0.3690 runs/s, 0.3690 assertions/s.
 1 runs, 1 assertions, 0 failures, 0 errors, 0 skips
 ```
 
-## Test result with cancancan 2.1.0
-
-- Edit `Gemfile` from `gem 'cancancan', '2.0.0'` to `gem 'cancancan', '2.1.0'`.
-- Run `bundle install`.
+## Actual test result with cancancan 2.1.0
 
 ```
 % rake test:system
